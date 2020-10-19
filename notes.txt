@@ -1,0 +1,91 @@
+TODO:
+- Look up: https://www.youtube.com/watch?v=JNagbi_QvIU
+- Look into production pooling (connection poolers)
+- Set columns to NOT NULL
+- Escape username + password to avoid sql injection attack issues
+- Automate date created (default??) for postgres
+- Change delete functions to alter the date_deleted column
+- Add the dates to the queries (js)
+
+Next stream:
+[x] Get list of users
+[x] Get user by uiud
+[x] Create user
+[x] Edit user
+[x] Delete user
+
+[x] Get list of groups
+[x] Get group by group id
+[x] Create group
+    [x] Add group creator as owner
+[x] Delete group
+---
+[x] Join group
+---
+[x] Create a sheet template
+[x] Add sheet template to group
+[x] Add a handle for a character's sheet
+
+[x] Test with Postman??
+
+[] Organise backend code (offline)
+[] Set up Jest
+
+[] Start Aurelia tutorial (refresher)
+[] Set up the frontend
+
+[] Set up custom error handling
+
+[] Figure out how to change the column names being updated based on user input
+
+
+---- Testing (GET, GET, POST, PUT, DELETE) ----
+
+http://localhost:3000/users
+http://localhost:3000/users/1
+curl --data "name=Elaine&email=elaine@example.com" http://localhost:3000/users
+curl -X PUT -d "name=Kramer" -d "email=kramer@example.com" http://localhost:3000/users/1
+curl -X "DELETE" http://localhost:3000/users/1
+
+
+--Functionality--
+
+
+
+
+
+- Create group description
+- Update group description
+- Delete group description
+
+- Create role
+- Delete role
+
+- Create sheet
+- Delete sheet
+
+- Updating sheet sections:
+    - Handle
+    - Role
+    - Background
+    - Images
+    - Attributes
+    - Save
+    - BTM
+    - Skills
+    - Skill IP
+    - Weapons
+    - Cyberware
+    - Gear
+    - Money/funds
+    - Armour (on body)
+    - Damage
+    - 
+
+Sheet operations
+- Luck resets every session
+- Empathy calculation
+- Calulate total humanity loss from cyberware items
+- If armour is above a certain weight calculate movement allowance
+
+Q's: does armour increase other stats like tech/cool etc?

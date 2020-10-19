@@ -1,0 +1,34 @@
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express()
+const db = require('./queries')
+const port = 3000
+
+app.use(bodyParser.json())
+app.use(
+    bodyParser.urlencoded({
+        extended: true,
+    })
+)
+
+app.get('/', (request, response) => {
+    response.json({info: 'Node.js, Express, and Postgress Cyberpunk Sheets App'})
+})
+
+app.get('/users', db.getUsers)
+app.get('/users/:id', db.getUserById)
+app.post('/users', db.createUser)
+app.put('/users/:id', db.updateUser)
+app.delete('/users/:id', db.deleteUser)
+
+app.get('/groups', db.getGroups)
+app.get('/groups/:id', db.getGroupById)
+app.post('/groups', db.createGroup)
+app.put('/groups/:id', db.updateGroup)
+app.delete('/groups/:id', db.deleteGroup)
+
+// Add the sheet routes
+
+app.listen(port, () => {
+    console.log(`App running on port ${port}`)
+})

@@ -1,0 +1,42 @@
+{
+  "name": "cp-sheets",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "prestart": "babel ./src --out-dir build",
+    "start": "node ./build/bin/www",
+    "startdev": "nodemon --exec babel-node ./src/bin/www",
+    "lint": "./node_modules/.bin/eslint ./src",
+    "pretty": "prettier --write '**/*{js,json}' '!node_modules/**'",
+    "postpretty": "npm run lint --fix",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.12.0",
+    "@babel/core": "^7.12.0",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/register": "^7.12.0",
+    "@babel/runtime": "^7.12.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jest": "^26.5.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.5",
+    "prettier": "^2.1.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
